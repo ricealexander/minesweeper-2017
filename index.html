@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Minesweeper Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet" type="text/css">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/manifest.json">
+  <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#f39c12">
+  <link rel="shortcut icon" href="favicon.ico">
+  <meta name="apple-mobile-web-app-title" content="Minesweeper">
+  <meta name="application-name" content="Minesweeper">
+  <meta name="msapplication-config" content="favicon/browserconfig.xml">
+  <meta name="theme-color" content="#fafbfb">
+
+  <link href="mines.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <h1>Minesweeper</h1>
+  <section id="game">
+    <div id="gamearea">
+      <div>
+        <button id="fliptile">FLIP</button><button id="flagtile" class="inactive">FLAG</button>
+        <span id="flagct">&nbsp;</span>
+	    <span id="status">&nbsp;</span>
+	    <button id="timer">&nbsp;</button>
+      </div>
+
+      <div id="board">
+        <ul>&nbsp;</ul>
+	  </div>
+
+      <div id="newgame">
+        <input id="heightno" type="text" placeholder="# tiles tall">
+        <input id="widthno" type="text" placeholder="# tiles wide">
+        <input id="mineno" type="text" placeholder="# of mines">
+        <button id="startnew">New Game</button>
+      </div>
+	  <br style="clear:right;">
+	</div>
+  </section>
+  <section id="desc">
+    <div class="desc-txt">
+      <h2>Playing the Game</h2>
+      <p><img src="icons/icon-mine.svg" height="25">
+	    There are mines hidden underneath tiles on the map.
+        <br>Your job is to uncover all of the tiles that do not have mines underneath them.
+	  </p>
+      <p><img src="icons/icon-tile.png" height="25">
+	    Some tiles contain numbers.
+        <br>These numbers let you know how many mines are underneath nearby tiles.
+	  </p>
+      <p><img src="icons/icon-flag.svg" height="25">
+	    Once you've determined the location of a mine, you can mark it with a flag.
+        <br>Flagged tiles are unclickable, so you don't accidentally click the mine.
+	  </p>
+    </div>
+    <div class="desc-txt">
+      <h2>Some Boar<button class="ms-notbtn" onclick="loadboard(16,16,40,'dreamboard')">d</button> Sizes</h2>
+	  <p><b>Easy</b>
+	    <br><button class="ms-btntext" onclick="loadboard(8,8,10)">8x8 board; 10 mines</button> (WinMine 1990 - 1998)
+	    <br><button class="ms-btntext" onclick="loadboard(9,9,10)">9x9 board; 10 mines</button> (WinMine 2000 +)
+	    <br><button class="ms-btntext" onclick="loadboard(13,13,26)">13x13 board; 26 mines</button> (Something New!)
+	  </p>
+	  <p><b>Intermediate</b>
+	    <br><button class="ms-btntext" onclick="loadboard(16,16,40)">16x16 board; 40 mines</button> (WinMine 1990 +)
+	  </p>
+	  <p><b>Expert</b>
+	    <br><button class="ms-btntext" onclick="loadboard(24,24,99)">24x24 board; 99 mines</button> (Mines 2.9 Beta)
+	    <br><button class="ms-btntext" onclick="loadboard(16,30,99)">16x30 board; 99 mines</button> (WinMine 1990 +)
+	  </p>
+    </div>
+  </section>
+<script src="mines.js"></script>
+</body>
+</html>

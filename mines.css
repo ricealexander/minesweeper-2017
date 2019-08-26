@@ -1,0 +1,201 @@
+body {
+   color: #475156;
+   font-family: 'Muli', Helvetica, sans-serif;
+   margin: 0;}
+
+h1 {
+   border-bottom: 2px solid #fea66e;
+   margin: 0;
+   padding: 10px 20px;}
+
+section {
+   box-sizing: border-box;
+   padding: 15px 30px;}
+
+#game {
+   background: #fafbfb;}
+
+#gamearea {
+   margin: 0 auto;
+   width:391px;}
+
+#desc {
+   display: flex;}
+
+footer {
+   position: relative !important;}
+
+#board {
+   margin: 0 auto;}
+
+#board ul {
+   padding: 0;}
+
+#board li {
+   background-color: #d1dadf;
+   border: 2px outset rgba(210,220,225,0.35);
+   box-shadow: inset -4px -4px 16px rgba(180,190,195,0.40);
+   box-sizing: border-box;
+   color: #828f96;
+   cursor: pointer;
+   display: inline-block;
+   font-weight: bold;
+   line-height: 30px;
+   text-align: center;
+   height:30px; width:30px;}
+
+	
+#board .mine {  /* https://www.flaticon.com/free-icon/mine_487029 */
+   background-image: url(icons/icon-mine.svg);
+   background-color: #e8eef1;
+   background-position: 1px 0;
+   background-repeat: no-repeat;
+   background-size: 25px 25px;
+   border-style: solid;
+   box-shadow: none;
+   cursor: default;}
+
+#board .mine.thismine {
+     border-color: #fe6e6e;}
+   
+#board .flag {  /* https://www.flaticon.com/free-icon/maps-and-flags_252025 */
+   background-image: url(icons/icon-flag.svg);
+   background-repeat: no-repeat;
+   background-size: 25px 25px;}
+
+#board .empty {
+   background-color: #e8eef1;
+   border-style: solid;
+   box-shadow: inset 4px 4px 16px rgba(240,245,250,0.45);
+   cursor: default;}
+
+#board .noclick {
+   cursor: default;}
+
+#board .num1 {
+   color: #3c6fd0;}
+
+#board .num2 {
+   color: #4aab4a;}
+
+#board .num3 {
+   color: #f97171;}
+
+#board .num4 {
+   color: #ae5fe8}
+
+#board .num5 {
+   color: #d459a2;}
+
+#board .num6 {
+   color: #40bb9a;}
+
+#board .num7 {
+   color: #70227d;}
+
+#flagct {
+   background-image: url(icons/icon-flagbg.svg);
+   background-repeat: no-repeat;
+   background-size: 27px 27px;
+   border-radius: 15px;
+   box-sizing: border-box;
+   color: #ebebeb;
+   display: inline-block;
+   font-size: 13px;
+   font-weight: bold;
+   line-height: 27px;
+   margin-left: 5px;
+   text-align: center;
+   height:27px; width:27px;}
+
+#status {
+   border-bottom: 1px solid #cfd8dd;
+   box-sizing: border-box;
+   display: inline-block;
+   line-height: 24px;
+   padding: 0 10px;
+   height:27px; width:160px;}
+
+#timer {
+   background: none;
+   border-color: #d1dadf;}
+
+#newgame {
+   float: right;}
+
+button {
+   background-color: #fea66e;
+   border: 1px solid #fea66e;
+   color: #475156;
+   font-weight: bold;
+   padding: 5px 10px;}
+
+button:focus, input:focus {
+   outline: none;}
+
+button.inactive {
+   background-color: #ebebeb;}
+
+.ms-btntext {
+   border-radius: 10px;
+   font-weight: normal;
+   margin: 2px;
+   padding: 2px 4px;}
+
+.ms-btntext:hover {
+   background-color: #ffba8f;}
+
+.ms-notbtn {
+   background: none;
+   border: none;
+   color: inherit;
+   font-size: inherit;
+   font-weight: inherit;
+   padding: inherit;}
+
+
+input[type="text"] {
+   background-color: #ebebeb;
+   border: 1px solid #fea66e;
+   box-sizing: border-box;
+   color: #475156;
+   font-weight: bold;
+   padding: 5px 10px;
+   width:96px;}
+
+input.invalid {
+   background-color: #ffe0e0;
+   border-color: #fe6e6e;}
+
+
+#desc h2 {
+   font-size: 1.3em;
+   margin: 1.3em 0 .7em 0;}
+
+#desc p {
+   background-color: #fafbfb;
+   border-left: 2px solid #fea66e;
+   font-size: 14px;
+   margin: 0 0 8px 0;
+   padding-left: 10px;}
+
+#desc img {
+   float: left;
+   margin: 5px 10px 0 0;}
+
+.desc-txt:first-child {
+   margin-right: 10px;}
+
+.desc-txt:last-child {
+   margin-left: 10px;}
+
+.desc-txt {
+   flex-basis: 50%;}
+
+
+@media (max-width:800px) {
+  #desc {
+     display: block;}
+  #desc .desc-txt {
+     margin: 0;}
+}
